@@ -1,0 +1,64 @@
+---
+layout: post
+title:  "[Intro] Reinforcement_Learning"
+date:   2019-03-15 13:30:15 +0900
+categories: jekyll update
+---
+1. Intorduction to Reinforcement Learning
+Machine Learning의 큰 범주
+
+Supervised Learning : 정해진 정답(Label)을 통해 학습
+Unsupervised Learning : 정답이 없는 문제에 대한 학습 
+Reinforcement Learning : 정답은 없지만 행동에 대한 '보상(Reward)'을 통해 학습
+
+강화학습의 위키피디아 정의
+
+강화 학습(Reinforcement learning)은 기계 학습(Machine Learning)의 한 영역이다. 행동심리학에서 영감을 받았으며, 어떤 환경 안에서 정의된 에이전트가 현재의 상태를 인식하여, 선택 가능한 행동들 중 보상을 최대화하는 행동 혹은 행동 순서를 선택하는 방법이다.
+
+강화학습을 해결 할 수 있는 문제들
+
+헬리콥터 기동
+Backgammon, 체스, 바둑 등
+투자 포트폴리오 관리
+발전소 관리
+휴머노이드를 걷게 하기
+Atari 게임들을 인간보다 잘 하기
+
+
+강화학습의 중요 특징
+
+1. Trial and Error
+
+환경과의 상호작용에서 학습하기 때문에 실제 시도를 통해 에러를 줄여 나가는 방식 
+
+2. Delayed Reward
+
+문제에 '시간'의 개념이 포함되어 있기 때문에 미래 지향적 행동에 대한 보상은 뒤 늦게 올 수 있기 때문에 어떤 행동이 좋은 행동인지 판단하기 어려움
+
+
+
+구성 요소
+
+강화학습은 기계 학습 방법 중 하나로, 마치 아이가 걷는 법을 배우듯, 환경과 상호작용하면서 걷는 법을 배우는 것과 유사한 학습 방법. 이를 구성하는 요소들은 정의에 나와 있듯 환경(Environment), 에이전트(Agent), 상태(State), 선택 가능한 행동(Action), 보상(Reward), 행동 혹은 행동 순서를 선택하는 방법(Policy)으로 구성 되어 있음 
+각 요소 별 정의 및 요소 간의 상호 작용은 이후 챕터에서 다룰 예정
+
+
+(Reinforcement Learning: An Introduction, Sutton)
+History
+
+Dynamic Programming : 
+
+Optimal Control(어떠한 비용함수의 비용을 최소화) 이론을 바탕으로 강화학습에서는 Bellman이 만든 Bellman equation을 통해 문제를 해결
+
+
+Markov Decision Process(이하 MDP) : 
+
+MDP는 의사결정 과정을 모델링하는 수학적인 틀. MDP는 동적 계획법과 강화학습 등의 방법으로 푸는 넓은 범위의 최적화 도구에 유용한 도구로 활용, 더 정확히는, Discrete Time Stochastic Control Process. MDP는 Markov Chain의 확장된 형태로 Markov Chain과의 차이점은 의사결정자의 선택이 개입된 행동이 존재한다는 것, 의사결정자에게 동기를 부여하는 보상이 존재한다는 점. 만약, 각 상태에서 오직 한 가지 행동만이 가능하며 모든 전이에 대한 보상이 같은 마르코프 결정 과정은 마르코프 연쇄와 동일
+
+
+이 두가지가 합쳐지면서 '강화학습'이 탄생. 이후, Temporal difference Learning, Q-Learning 으로 발전. 최근 딥러닝과 접목되면서 눈부신 발전을 이루고 있음
+
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
