@@ -5,6 +5,69 @@ date:   2019-09-08 20:30:00 +0900
 categories: jekyll update
 ---
 
+[ Prologue ]
+프론트 엔드 작업을 HTML, CSS, JS로 하면서 프레임워크의 필요성을 절실히 느껴 하나 배워보자라는 생각으로 시작하게 되었다.
+현재 핫한 프론트 엔드 프레임워크로는 Angular, React, Vue가 있는데 많은 고민을 하다 Vue를 배우기로 결정하였다.
+Vue는 HTML, CSS, JS만 아는 입문자도 쉽게 배울 수 있다고 하니 일주일에 주말을 조금씩 쪼개어 배워보자!
+
+리액트와 앵귤러는 상대적으로 오래되었고 Vue는 앵귤러의 데이터 바인딩 특성과 리액트의 Virtual DOM기반 렌더링 특징을 모두 갖는 최신 프레임워크라고 설명되어 있는데, 사실 입문자인 나로써는 이것들이 어떤건지 이해가 안된다.
+일단 시작해보자!
+
+[ Vue.js의 특징 ]
+뷰는 MVVM 구조에서 VM(View Model)에 해당한다. MVVM이란 Model - View - View Model 패턴으로 '마크업 언어나 GUI 코드를 비즈니스 로직 또는 백엔드 로직과 분리하여 개발하는 소프트웨어 디자인 패턴'이라 설명되어 있다.(wiki)
+즉, 화면의 요소 코드와 데이터 로직 코드를 분리하여 코드의 직관성과 유지보수의 편의성을 높인다고 한다.
+
+뷰의 또다른 특징은 컴포넌트 기반의 프레임워크이다. 컴포넌틔 기반의 개발 방식은 코드를 재사용하기 쉽고 HTML 코드에서 화면의 구조를 직관적으로 파악할 수 있다고 한다.
+
+이외에도 뷰는 앵귤러나 리액트에 비해 성능적인 면에서 이점이 있다고 한다.
+
+[ Vue.js 개발 환경 설정 ]
+Vue를 사용하기 위해 가장 먼저 개발환경을 설정하자.
+다음과 같은 도구들이 필요하다.
+
+* 인터넷 브라우저(Chrome)
+* 에디터 (VS Code)
+* Node.js
+* Vue 개발자 도구 (크롬 확장 플러그인)
+
+Node.js를 제외한 도구들은 자신의 주로 사용하는 툴을 사용해도 된다. 여기서는 브라우저는 크롬, 에디터는  VS Code, Vue개발자 도구는 크롬의 확장 플러그인을 사용하겠다.
+각각의 도구는 해당 홈페이지에서 다운 받을 수 있다.
+
+Chrome : https://www.google.com/intl/ko/chrome/
+VS Code : https://code.visualstudio.com/
+Node.js : https://nodejs.org/ko/
+Vue.js devtools : https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd
+  
+[ Hello Vue.js ]
+이제 뷰를 사용해보자. 작업 순서는 다음과 같다.
+
+HTML 파일 작성 -> 뷰 소스코드 추가 -> 브라우저로 확인
+
+VS Code를 이용해 index.html 파일을 생성하고 다음 예시 코드를 작성해보자.
+
+<html>
+    <head>
+        <title>Vue Starter</title>
+    </head>
+    <body>
+        <div id = "app">
+            {{ message }}
+        </div>
+        <script src="https:/cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    message: 'Hello Vue.js'
+                }
+            });
+        </script>
+    </body>
+</html>
+
+해당 코드를 index.html에 저장하고 크롬을 이용해 해당 파일을 실행시키면 다음과 같은 화면을 볼 수 있다.
+[ vue_01_01.jpg ]
+
 
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
